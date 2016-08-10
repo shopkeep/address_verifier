@@ -30,58 +30,6 @@ module AddressVerifier
 			@json['AddressLine2']
 		end
 
-		def number
-			@json['Number']
-		end
-
-		def street
-			@json['Street']
-		end
-
-		def sec
-			@json['Sec']
-		end
-
-		def sec_number
-			@json['SecNumber']
-		end
-
-		def pre_direction
-			@json['PreDir']
-		end
-
-		def post_direction
-			@json['PostDir']
-		end
-
-		def zip
-			@json['Zip']
-		end
-
-		def zip
-			@json['Zip']
-		end
-
-		def zip4
-			@json['Zip4']
-		end
-
-		def county
-			@json['County']
-		end
-
-		def state
-			@json['State']
-		end
-
-		def suffix
-			@json['Suffix']
-		end
-
-		def city
-			@json['City']
-		end
-
 		def latitude
 			@json['Latitude']
 		end

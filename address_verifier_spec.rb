@@ -54,51 +54,7 @@ describe AddressVerifier do
         expect(address.address_line_2).to eq('PLAINSBORO, NJ 08536-1963')
       end
 
-      it "returns the proper nummber" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.number).to eq('46')
-      end
-
-      it "returns the proper street" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.street).to eq('DOGWOOD')
-      end
-
-      it "returns the proper suffix" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.suffix).to eq('DR')
-      end
-
-      it "returns the proper city" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.city).to eq('PLAINSBORO')
-      end
-
-      it "returns the proper state" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.state).to eq('NJ')
-      end
-
-      it "returns the proper zip code" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.zip).to eq('08536')
-      end
-
-      it "returns the proper zip+4 code" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.zip4).to eq('1963')
-      end
-
-      it "returns the proper zip+4 code" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.county).to eq('MIDDLESEX')
-      end
-
-      it "returns the proper zip+4 code" do
-         address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
-         expect(address.county).to eq('MIDDLESEX')
-      end
-
+  
       it "returns the proper latitude" do
          address = AddressVerifier.verify_address "46 Dogwood Drive", "", "Plainsboro", "New Jersey", "08536"
          expect(address.latitude).to eq(40.328282)
@@ -152,21 +108,6 @@ describe AddressVerifier do
       it "returns the correct Address Line 2" do
         address = AddressVerifier.verify_address "321 E 48 Street", "Apartment 4D", "New York City,", "NY", ""
         expect(address.address_line_2).to eq("NEW YORK, NY 10017-1731")
-      end
-
-      it "returns correct secondary designator" do
-        address = AddressVerifier.verify_address "321 E 48 Street", "Apartment 4D", "New York City,", "NY", ""
-        expect(address.sec).to eq("APT")
-      end
-
-      it "returns correct secondary designator number" do
-        address = AddressVerifier.verify_address "321 E 48 Street", "Apartment 4D", "New York City,", "NY", ""
-        expect(address.sec_number).to eq("4D")
-      end
-
-      it "returns correct secondary pre-direction" do
-        address = AddressVerifier.verify_address "321 E 48 Street", "Apartment 4D", "New York City,", "NY", ""
-        expect(address.pre_direction).to eq("E")
       end
     end
 
