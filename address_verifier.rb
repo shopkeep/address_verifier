@@ -22,10 +22,13 @@ module AddressVerifier
 		end
 
 		#Various components of the address:
+
+		#returns the Street Address and Secondary Designators
 		def address_line_1
 			@json['AddressLine1']
 		end
 
+		#returns the City, State, and full Zipcode
 		def address_line_2
 			@json['AddressLine2']
 		end
@@ -46,10 +49,12 @@ module AddressVerifier
 		request_string = "http://www.yaddress.net/api/Address?AddressLine1=#{address_line_1}&AddressLine2=#{address_line_2}&UserKey="
 		
 		if user_key.nil? == false
+			#if there is a userkey, append it to the end
 			request_string = "#{request_string}#{user_key}"
 		end
 		
-		json = JSON.parse ((Faraday.get request_string).body)
+		faraday_response = Faraday.get request_string
+		json = JSON.parse (faraday_response.body)
 
 		YaddressResponse.new json
 	end
