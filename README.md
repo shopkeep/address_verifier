@@ -82,10 +82,31 @@ No such house number in the street
 ```
 
 # How to Re-create Gem
-If you edit the source files and want to recreate the gem, I used [this guide](http://guides.rubygems.org/make-your-own-gem/) to do so.
+For reference, the first time this gem was built, [this guide](http://guides.rubygems.org/make-your-own-gem/) was used to do so.
 
-Basically, alter the **address_verifier.gemspec** file accordingly (specifically, edit the date, version, and `s.files`).
+Basically, alter the **address_verifier.gemspec** file accordingly (specifically, edit `s.date`, `s.version`, and `s.files`).
 
-Then, in terminal, type `gem build address_verifier.gemspec'.
+Then, in terminal, type `gem build address_verifier.gemspec`.
 
-To install the gem just run `gem install ./XXXXX` where XXXXX is the name of the gem (with the appropriate version number)
+To install the gem just run `gem install ./XXXXX.gem` where XXXXX is the name of the gem (with the appropriate version number)
+
+For example, here is the terminal view when the gem was built:  
+(Note that FixREADME was the name of the current git branch)
+```sh
+➜  address_verifier git:(FixREADME) ✗ gem build address_verifier.gemspec
+WARNING:  no homepage specified
+WARNING:  See http://guides.rubygems.org/specification-reference/ for help
+  Successfully built RubyGem
+  Name: address_verifier
+  Version: 0.0.1
+  File: address_verifier-0.0.1.gem
+```
+
+Here is the terminal view when the gem was installed:
+```sh
+➜  address_verifier git:(FixREADME) ✗ gem install ./address_verifier-0.0.1.gem
+Successfully installed address_verifier-0.0.1
+Parsing documentation for address_verifier-0.0.1
+Done installing documentation for address_verifier after 0 seconds
+1 gem installed
+```
