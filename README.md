@@ -90,8 +90,8 @@ Then, in terminal, type `gem build address_verifier.gemspec`.
 
 To install the gem just run `gem install ./XXXXX.gem` where XXXXX is the name of the gem (with the appropriate version number)
 
-For example, here is the terminal view when the gem was built:
-
+For example, here is the terminal view when the gem was built:  
+(Note that FixREADME was the name of the current git branch)
 ```sh
 ➜  address_verifier git:(FixREADME) ✗ gem build address_verifier.gemspec
 WARNING:  no homepage specified
