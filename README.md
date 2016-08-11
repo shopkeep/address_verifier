@@ -80,3 +80,12 @@ false
 8
 No such house number in the street
 ```
+
+# How to Re-create Gem
+If you edit the source files and want to recreate the gem, I used [this guide](http://guides.rubygems.org/make-your-own-gem/) to do so.
+
+Basically, alter the **address_verifier.gemspec** file accordingly (specifically, edit the date, version, and `s.files`).
+
+Then, in terminal, type `gem build address_verifier.gemspec'.
+
+To install the gem just run `gem install ./XXXXX` where XXXXX is the name of the gem (with the appropriate version number)
