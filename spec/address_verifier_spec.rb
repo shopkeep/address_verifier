@@ -1,4 +1,4 @@
-require_relative "address_verifier.rb"
+require_relative "../lib/address_verifier.rb"
 
 include AddressVerifier
 
