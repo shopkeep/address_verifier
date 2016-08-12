@@ -13,7 +13,7 @@ The main method (`verify_address`) is located in the module **AddressVerifier**.
 - **City**: a String of the city. May be an empty String only if Zipcode is not empty.
 - **State**: a String of the state. May be abbreviated (e.g. "NY", "HI") or not (e.g. "New York", "Hawaii"). May be an empty String only if Zipcode is not empty.
 - **Zipcode**: a String of the zipcode. May be an empty String only if both State and City are not empty.
-- **User Key**: a String of the UserKey. UserKeys must be purchased through [Yaddress](http://www.yaddress.net/Home/Pricing). May be the empty String or completely ommitted (in which case the module will act as if you passed in a blank UserKey).
+- **User Key**: a String of the UserKey. UserKeys must be purchased through [Yaddress](http://www.yaddress.net/Home/Pricing). May be the empty String or completely omitted (in which case the module will act as if you passed in a blank UserKey).
 
 Therefore the following code is valid:  
 ```sh
